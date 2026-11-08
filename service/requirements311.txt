@@ -1,0 +1,16 @@
+# Data Processing
+pandas
+
+# LangChain 0.3.x ecosystem
+langchain
+langchain-core
+langchain-openai
+langchain-community
+langchain-chroma
+
+# Vector Database
+chromadb
+faiss-cpu
+
+# HuggingFace Embedding
+sentence-transformers

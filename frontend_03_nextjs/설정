@@ -1,0 +1,51 @@
+프로젝트 생성
+
+npx create-next-app@latest frontend_nextjs
+
+Next.js 프로젝트 설정
+초보자용 추천 설정
+Would you like to use TypeScript?No
+Which linter would you like to use?ESLint
+Would you like to use React Compiler?No
+Would you like to use Tailwind CSS?No
+Would you like your code inside a src/ directory?Yes
+Would you like to use App Router?Yes
+Would you like to customize the import alias?No
+
+프로젝트 폴더로 이동합니다.
+cd frontend_nextjs
+npm run dev
+
+
+# React의 핵심 개념인 컴포넌트, Props, useState, useEffect, fetch
+food-menu/
+│
+├── public/
+│
+├── src/
+│   │
+│   ├── app/
+│   │   ├── page.js
+│   │   ├── layout.js
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   │   │
+│   │   ├── Navigation.js
+│   │   ├── MenuHome.js
+│   │   ├── MenuList.js
+│   │   ├── MenuAdd.js
+│   │   ├── MenuEdit.js
+│   │   └── Chat.js
+│   │
+│   └── services/
+│       ├── menuService.js
+│       └── chatService.js
+│
+└── package.json
+
+
+폴더           역할
+app            Next.js 시작 화면
+components     화면을 구성하는 React 컴포넌트
+services       서버와 통신하는 함수

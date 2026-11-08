@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 전체 레이아웃 */
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  min-height: 90vh;
+}
+
+.main-area {
+  min-width: 0;
+  padding: 10px;
+}
+
+/* 네비게이션 */
+
+.navigation {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.navigation button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.navigation button.active {
+  background: #007bff;
+  color: white;
+}
+
+/* 메뉴 카드 */
+
+.recommend-list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 180px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background: #fafafa;
+}
+
+/* 검색 */
+
+.search-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 테이블 */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #f2f2f2;
+}
+
+.action-btns {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.action-btns button {
+  padding: 5px 10px;
+  margin-left: 5px;
+}
+
+.delete-btn,
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+}
+
+/* 폼 */
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* 모달 */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* 채팅 */
+
+.chat-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  min-height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+  position: sticky;
+  top: 20px;
+}
+
+.chat-sidebar h2 {
+  font-size: 20px;
+  padding: 15px;
+  margin: 0;
+  background: #007bff;
+  color: white;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f8f9fa;
+}
+
+.user-message {
+  align-self: flex-end;
+  max-width: 85%;
+  padding: 10px 13px;
+  background: #007bff;
+  color: white;
+  border-radius: 12px 12px 0 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.bot-message {
+  align-self: flex-start;
+  max-width: 90%;
+  padding: 10px 13px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px 12px 12px 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.chat-sources {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+  border-top: 1px solid #eee;
+  padding-top: 6px;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input-area textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.chat-input-area button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+/* 반응형 */
+
+@media (max-width: 800px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-sidebar {
+    height: 400px;
+    min-height: 400px;
+    position: static;
+  }
+
+  .recommend-list {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+}

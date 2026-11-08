@@ -1,0 +1,94 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python Build
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+
+# Python Cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Private Keys
+*.pem
+*.key
+
+# VS Code / IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+
+# Node.js / React / Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+.next-env.d.ts
+
+# Package Manager
+.npm/
+.pnpm-store/
+
+# Node.js Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# Vector Database / RAG
+chroma_db/
+chroma/
+faiss_db/
+vector_db/
+vectorstore/
+*.faiss
+*.pkl
+
+# HuggingFace
+.cache/
+huggingface_cache/
+models/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+*.swo
+*.old

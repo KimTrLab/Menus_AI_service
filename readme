@@ -1,0 +1,3 @@
+설치   pip install -r requirements.txt
+
+env 파일    OPENAI_API_KEY=여기에_본인의_API_KEY
